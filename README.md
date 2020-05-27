@@ -14,7 +14,7 @@ https://tests4geeks.com/blog/python-celery-rabbitmq-tutorial/
 - *** --- * --- 
 - ** ---------- [config]
 - ** ---------- .> app:         test_celery:0x107acff10
-- ** ---------- .> transport:   amqp://purple:**@dev-ay-rabbitmq.daumkakao.io:5672/dev-cage-infra
+- ** ---------- .> transport:   amqp://id:password@host:5672/vhost
 - ** ---------- .> results:     rpc://
 - *** --- * --- .> concurrency: 12 (prefork)
 -- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
@@ -26,7 +26,7 @@ https://tests4geeks.com/blog/python-celery-rabbitmq-tutorial/
 [tasks]
   . test_celery.tasks.longtime_add
 
-[2020-05-27 16:09:02,275: INFO/MainProcess] Connected to amqp://purple:**@dev-ay-rabbitmq.daumkakao.io:5672/dev-cage-infra
+[2020-05-27 16:09:02,275: INFO/MainProcess] Connected to amqp://id:password@host:5672/vhost
 [2020-05-27 16:09:02,666: INFO/MainProcess] mingle: searching for neighbors
 [2020-05-27 16:09:04,202: INFO/MainProcess] mingle: all alone
 [2020-05-27 16:09:04,440: INFO/MainProcess] celery@Dereks-MacBook-Pro.local ready.
@@ -46,7 +46,7 @@ Task result:  3
 
 ## 결과 
 ```shell script
-[2020-05-27 16:09:02,275: INFO/MainProcess] Connected to amqp://아이디:패스워드@호스트:5672/vhost
+[2020-05-27 16:09:02,275: INFO/MainProcess] Connected to amqp://id:password@host:5672/vhost
 [2020-05-27 16:09:02,666: INFO/MainProcess] mingle: searching for neighbors
 [2020-05-27 16:09:04,202: INFO/MainProcess] mingle: all alone
 [2020-05-27 16:09:04,440: INFO/MainProcess] celery@Dereks-MacBook-Pro.local ready.
